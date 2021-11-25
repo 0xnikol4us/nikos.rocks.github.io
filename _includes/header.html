@@ -1,0 +1,52 @@
+<div id="particles-js">
+  <div class="header">
+      <h1>
+        <span class="site-title">{{site.username}}</span>
+        <span class="site-description">{{site.user_title}}</span>
+      </h1>
+      <div class="header-icons">
+        <a aria-label="send_email" href="mailto:nikos.roume@outlook.com">
+          <i id="send_email" class="icon fa fa-envelope"></i>
+        </a>
+        <a aria-label="my_resume" onclick="my_resume()">
+          <i id="my_resume" class="icon fa fa-file" aria-hidden="true"></i>
+        </a>
+        <a aria-label="my_linkedin" target="_blank" href="https://www.linkedin.com/in/nikos-roumeliotis/">
+          <i id="my_likedin" class="icon fa fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </div>
+  </div>
+</div>
+<style>
+  .swal2-radio input, .swal2-checkbox input:checked {
+    color: rgb(150, 236, 52, .8) !important;
+  }
+</style>
+<script>
+  async function my_resume() {
+    const { value: accept } = await Swal.fire({
+      padding: '3em',
+      backdrop: `
+        rgb(150, 236, 52, .2)
+        url("https://sweetalert2.github.io/images/nyan-cat.gif")
+        left top
+        no-repeat
+      `,
+      title: 'Download my resume',
+      input: 'checkbox',
+      inputValue: 0,
+      inputPlaceholder:
+        'I agree to use it responsibly.',
+      confirmButtonText:
+        'Get It Now',
+      confirmButtonColor: 'rgb(150, 236, 52, .8)',
+      inputValidator: (result) => {
+        return !result && 'You need to agree with this term!'
+      }
+    })
+
+    if (accept) {
+      window.open('{{site.url}}/assets/my_resume.pdf', '_blank').focus();
+    }
+  }
+</script>

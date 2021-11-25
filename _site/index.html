@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Nikos Roumeliotis</title>
+  <meta name="description" content="This is my profile">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+  <body>
+      <div id="particles-js">
+  <div class="header">
+      <h1>
+        <span class="site-title">Nikos Roumeliotis</span>
+        <span class="site-description">Eth. Hacker | PenTester | AppSec</span>
+      </h1>
+      <div class="header-icons">
+        <a aria-label="send_email" href="mailto:nikos.roume@outlook.com">
+          <i id="send_email" class="icon fa fa-envelope"></i>
+        </a>
+        <a aria-label="my_resume" onclick="my_resume()">
+          <i id="my_resume" class="icon fa fa-file" aria-hidden="true"></i>
+        </a>
+        <a aria-label="my_linkedin" target="_blank" href="https://www.linkedin.com/in/nikos-roumeliotis/">
+          <i id="my_likedin" class="icon fa fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </div>
+  </div>
+</div>
+<style>
+  .swal2-radio input, .swal2-checkbox input:checked {
+    color: rgb(150, 236, 52, .8) !important;
+  }
+</style>
+<script>
+  async function my_resume() {
+    const { value: accept } = await Swal.fire({
+      padding: '3em',
+      backdrop: `
+        rgb(150, 236, 52, .2)
+        url("https://sweetalert2.github.io/images/nyan-cat.gif")
+        left top
+        no-repeat
+      `,
+      title: 'Download my resume',
+      input: 'checkbox',
+      inputValue: 0,
+      inputPlaceholder:
+        'I agree to use it responsibly.',
+      confirmButtonText:
+        'Get It Now',
+      confirmButtonColor: 'rgb(150, 236, 52, .8)',
+      inputValidator: (result) => {
+        return !result && 'You need to agree with this term!'
+      }
+    })
+
+    if (accept) {
+      window.open('http://localhost:3000/assets/my_resume.pdf', '_blank').focus();
+    }
+  }
+</script>
+      <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.9.2/dist/tsparticles.min.js" integrity="sha256-5kED68Spy7K2CEbfu4CjV92DmZR5ZQFUoIR5qmPzZWg=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@3/dark.css">
+<link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css">
+<script src="/assets/js/sweet-scroll.min.js"></script>
+<script src="/assets/js/main.js"></script>
+<script>
+   tippy('#my_resume', {
+        content: 'My Resume!',
+        placement: 'bottom',
+        touch: true,
+        zIndex: 1000
+    });
+    tippy('#send_email', {
+        content: 'Send me an email!',
+        placement: 'bottom',
+        touch: true,
+        zIndex: 1000
+    });
+    tippy('#my_likedin', {
+        content: 'My Linkedin!',
+        placement: 'bottom',
+        touch: true,
+        zIndex: 1000
+    });
+</script>
+<!-- Google Analytics -->
+
+<script>
+var dnt = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+if (dnt != "1" && dnt != "yes") {
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', '', 'auto');
+ga('send', 'pageview');
+}
+</script>
+
+
+  </body>

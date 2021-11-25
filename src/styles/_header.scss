@@ -1,0 +1,185 @@
+#particles-js {
+  background: $main;
+  display: flex;
+  vertical-align: bottom;
+  width: 100%;
+  min-height: var(--app-height);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  .particles-js-canvas-el,
+  .tsparticles-canvas-el {
+    width:100% !important;
+    height:var(--app-height) !important;
+  }
+}
+
+.header {
+  width: 100%;
+  z-index: 1;
+  text-align: center;
+  color: rgb(150, 236, 52) ;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0 auto;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  .site-title {
+    font-size: 50px;
+    display: block;
+    line-height: 1;
+    color: rgb(150, 236, 52) ;
+    @media only screen and (min-width:$sm){
+      font-size: 40px;
+    }
+    @media only screen and (min-width:$md){
+      font-size: 60px;
+    }
+    @media only screen and (min-width:$lg){
+      font-size: 80px;
+    }
+    @media only screen and (min-width:$xl){
+      margin: 0;
+      font-size: 80px;
+    }
+  }
+  .site-description {
+    font-size: 20px;
+    display: block;
+    line-height: 1;
+    color: rgb(150, 236, 52) ;
+    margin-top: 10px;
+    @media only screen and (min-width:$sm){
+      font-size: 20px;
+    }
+    @media only screen and (min-width:$md){
+      font-size: 20px;
+    }
+    @media only screen and (min-width:$lg){
+      font-size: 25px;
+    }
+    @media only screen and (min-width:$xl){
+      font-size: 30px;
+    }
+  }
+}
+
+.header-links {
+  margin: 10px;
+  .link {
+    color: rgb(150, 236, 52) ;
+    text-decoration: none;
+    font-size: 15px;
+    margin: 10px;
+  }
+}
+
+.header-icons {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 10px;
+  .icon {
+    text-align: center;
+    color: rgb(150, 236, 52) ;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 50%;
+    border: 2px solid rgb(150, 236, 52) ;
+    transition: all .7s;
+    &:hover {
+      color: $main;
+      background: rgb(150, 236, 52) ;
+    }
+    &:active {
+      color: $main;
+      background: rgb(150, 236, 52) ;
+    }
+    @media only screen and (min-width:$sm){
+      width: 15px;
+      height: 15px;
+      font-size: 15px;
+    }
+    @media only screen and (min-width:$md){
+      width: 20px;
+      height: 20px;
+      font-size: 20px;
+    }
+    @media only screen and (min-width:$lg){
+      width: 25px;
+      height: 25px;
+      font-size: 25px;
+    }
+    @media only screen and (min-width:$xl){
+      width: 25px;
+      height: 25px;
+      font-size: 25px;
+    }
+  }
+}
+
+.down {
+  color: rgb(150, 236, 52) ;
+  position: absolute;
+  bottom: 25px;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  cursor: pointer;
+  .icon {
+      position: absolute;
+      -webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      width: 100px;
+      height: 100px;
+      fill: rgb(150, 236, 52) ;
+      -webkit-animation: pulse 1.3s infinite;
+      animation: pulse 1.3s infinite;
+      &:hover {
+        color: $sec;
+      }
+      &:active {
+        color: $sec;
+      }
+  }
+}
+
+#swal2-title {
+  @media only screen and (min-width:$sm){
+    font-size: 20px;
+  }
+  @media only screen and (min-width:$md){
+    font-size: 1.875em !important;
+  }
+  @media only screen and (min-width:$lg){
+    font-size: 1.875em !important;
+  }
+  @media only screen and (min-width:$xl){
+    font-size: 1.875em !important;
+  }
+}
+
+.swal2-popup {
+  @media only screen and (min-width:$sm){
+    font-size: 10px !important;
+  }
+  @media only screen and (min-width:$md){
+    font-size: initial !important;
+  }
+  @media only screen and (min-width:$lg){
+    font-size: initial !important;
+  }
+  @media only screen and (min-width:$xl){
+    font-size: initial !important;
+  }
+}

@@ -1,0 +1,29 @@
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@1.9.2/dist/tsparticles.min.js" integrity="sha256-5kED68Spy7K2CEbfu4CjV92DmZR5ZQFUoIR5qmPzZWg=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@3/dark.css">
+<link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css">
+<script src="{{ "/assets/js/sweet-scroll.min.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "/assets/js/main.js" | prepend: site.baseurl }}"></script>
+<script>
+   tippy('#my_resume', {
+        content: 'My Resume!',
+        placement: 'bottom',
+        touch: true,
+        zIndex: 1000
+    });
+    tippy('#send_email', {
+        content: 'Send me an email!',
+        placement: 'bottom',
+        touch: true,
+        zIndex: 1000
+    });
+    tippy('#my_likedin', {
+        content: 'My Linkedin!',
+        placement: 'bottom',
+        touch: true,
+        zIndex: 1000
+    });
+</script>
+{% include google-analytics.html %}
